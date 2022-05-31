@@ -1,0 +1,6 @@
+#!/bin/sh
+#SBATCH --job-name=test1
+#SBATCH --mail-type=END
+#SBATCH --mail-user=thomas.barbero@irit.fr
+#SBATCH --output=test1.out
+echo 'aa'

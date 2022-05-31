@@ -1,0 +1,7 @@
+#!/bin/sh
+#SBATCH --job-name=data_generation_analogie_paraphrase
+#SBATCH --mail-type=END
+#SBATCH --mail-user=thomas.barbero@irit.fr
+#SBATCH --output=data_generation.out
+
+python3.9 data_generation1.py

@@ -1,0 +1,12 @@
+#!/bin/sh
+#SBATCH --job-name=data_generation_analogie_paraphrase
+#SBATCH --mail-type=END
+#SBATCH --mail-user=thomas.barbero@irit.fr
+#SBATCH --output=data_generation.out
+
+virtualenv --no-download $SLURM_TMPDIR/env
+source $SLURM_TMPDIR/env/bin/activate
+pip install --no-index --upgrade pip
+
+pip install sentence_transformers
+python3.6 data_generation.py
